@@ -79,6 +79,7 @@ You need to know what are the public address the nodes are interfacing so that y
     ip-y-y-y-y.ap-southeast-1.compute.internal   Ready   y.y.y.y
 
 You also need to know what port are the NodePort service running on:
+
     > kubectl get service/locust-service
     NAME             TYPE       CLUSTER-IP     EXTERNAL-IP   PORT(S)          AGE
     locust-service   NodePort   10.100.3.131   <none>        8089:32535/TCP   26h
