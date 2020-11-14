@@ -41,12 +41,13 @@ To set up the cluster:
 
 1) Create an EKS cluster via CLI. If you have an existing EKS cluster run `aws eks update-kubeconfig --name <name-of-eks-cluster>`
 
-    > git clone https://github.com/karol-brejna-i/locust-experiments.git
-    > cd locust-experiments
-    > cd kubernetes
+2) Then run the following:
+
+    > git clone git@github.com:liaogz82/eks-locust.git
+    > cd eks-locust
     > kubectl create -f nodeport.yaml -f scripts-cm.yaml -f master-deployment.yaml -f service.yaml -f slave-deployment.yaml
 
-*kubectl* command connects to my minikube cluster and crate the components mentioned above.
+*aws eks* command connects to my your eks cluster and crate the components mentioned above.
 If ran for the first time, it may take a while to complete (if there is no locust docker image on the cluster, it needs to be downloaded first).
 To see, if locust nodes are running we can inspect if the pods are up:
 
