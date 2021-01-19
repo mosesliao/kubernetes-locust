@@ -43,8 +43,8 @@ To set up the cluster:
 
 2) Then run the following:
 
-    > git clone git@github.com:liaogz82/eks-locust.git
-    > cd eks-locust
+    > git clone git@github.com:mosesliao/kubernetes-locust.git
+    > cd kubernetes-locust
     > kubectl create -f nodeport.yaml -f scripts-cm.yaml -f master-deployment.yaml -f service.yaml -f slave-deployment.yaml
 
 *aws eks* command connects to my your eks cluster and crate the components mentioned above.
