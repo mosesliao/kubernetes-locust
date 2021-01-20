@@ -26,7 +26,7 @@ spec:
     spec:
       containers:
       - image: locustio/locust
-        imagePullPolicy: IfNotPresent
+        imagePullPolicy: Always
         name: worker
         args: ["--worker", "--master-host=locust-master"]
         volumeMounts:
