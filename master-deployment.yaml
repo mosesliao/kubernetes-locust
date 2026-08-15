@@ -39,6 +39,18 @@ spec:
           name: comm-plus-1
         - containerPort: 8089
           name: web-ui
+        startupProbe:
+          tcpSocket:
+            port: web-ui
+          periodSeconds: 5
+          failureThreshold: 30
+        readinessProbe:
+          httpGet:
+            path: /
+            port: web-ui
+          periodSeconds: 15
+          timeoutSeconds: 5
+          failureThreshold: 3
         resources: {}
         terminationMessagePath: /dev/termination-log
         terminationMessagePolicy: File
